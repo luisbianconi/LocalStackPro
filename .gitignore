@@ -1,0 +1,31 @@
+# ==============================================================================
+# Terraform Git Ignore Configuration
+# ==============================================================================
+
+# Compiled provider plugins & cached dependencies (prevents GitHub 100MB file limit errors)
+**/.terraform/*
+.terraform/
+.terraform.lock.hcl
+
+# Terraform execution state files
+# Best Practice: State should be kept in remote backends (e.g. S3/DynamoDB), never in Git
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash & debug logs
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# NOTE: Lab output artifacts like generated_credentials.json are intentionally
+# tracked to demonstrate automated artifact generation for educational purposes.
